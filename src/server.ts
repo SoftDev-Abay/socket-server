@@ -6,8 +6,8 @@ import cors from "cors";
 
 const app = express();
 
-// Enable CORS so your frontend can connect (adjust the origin for production)
-app.use(cors());
+// Enable CORS for all routes
+app.use(cors({ origin: "*" }));
 
 // Create an HTTP server using Express
 const httpServer = createServer(app);
